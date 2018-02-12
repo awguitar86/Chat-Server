@@ -14,5 +14,5 @@ app.put( `${messagesBaseUrl}/:id`, mc.update );
 app.delete( `${messagesBaseUrl}/:id`, mc.delete );
 
 const port = 3000;
-app.listen( port, () => { console.log( `Server is listenign on port ${port}`); });
+app.listen( port, () => { console.log( `Server is listening on port ${port}`); });
 
