@@ -1,6 +1,6 @@
 var express = require('express');  //this is how to import/require things in a node server.
 var bodyParser = require('body-parser');
-var messagesController = require('./controllers/messages_controller');
+var mc = require( __dirname + '/controllers/messages_controller' );
 
 var app = express();  //this creates an express app by saving it to a variable.
 
