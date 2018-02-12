@@ -14,7 +14,7 @@ module.exports = {                          //Export an object with methods to c
     update: ( req, res ) => {
         const { text } = req.body;          //Update the text property of a message using the text value from the request body. 
         const updateID = req.params.id;     //determine which message to update based on the value of id from the request url parameters.
-        const messageIndex = messages.findIndex( messages => messages.id == updateID );
+        const messageIndex = messages.findIndex( messages => messages.id == updateID );  //We can use .findIndex to get the index where the ids match.
         
     },
     delete: ( req, res ) => {
