@@ -26,6 +26,7 @@ module.exports = {                          //Export an object with methods to c
         res.status(200).send( messages );   //Then we can return the updated messages array.
     },
     delete: ( req, res ) => {
-
+        const deleteID = req.params.id;     //The delete method should delete a message using the value of id from the request url parameters.
+        
     }
 }
