@@ -12,7 +12,9 @@ module.exports = {                          //Export an object with methods to c
         res.status(200).send( message );    //The read method should return the entire messages array.
     },
     update: ( req, res ) => {
-
+        const { text } = req.body;          //Update the text property of a message using the text value from the request body. 
+        const updateID = req.params.id;     //determine which message to update based on the value of id from the request url parameters.
+        
     },
     delete: ( req, res ) => {
 
