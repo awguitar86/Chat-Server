@@ -3,10 +3,10 @@ var id = 0;         //Create a variable that will keep track of what id to assig
 
 module.exports = {  //Export an object with methods to create, read, update, and delete messages. Each with two prameters req and res.
     create: ( req, res ) => {
-        const { text, time } = req.body;
-        messages.push({ id, text, time });
-        i++;
-        res.status(200).send( messages );
+        const { text, time } = req.body;  //create a new message object using text and time from the request body and also the global id variable.
+        messages.push({ id, text, time }); //It should then push this new messsage object into the messages array.
+        id++;  //increment id by one.
+        res.status(200).send( messages ); //send the updated messages array.
     },
     read: ( req, res ) => {
 
