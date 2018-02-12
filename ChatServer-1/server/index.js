@@ -9,3 +9,4 @@ app.use( bodyParser.json() );  //this configures the express app to parse JSON f
 const port = 3000;  //port is saved to a variable in case it needs changed, it only needs changed once.
 app.listen( port, () => { console.log(`Server is listening on port ${port}`); } );  //this uses the listen method from express to let the app know what port to listen on. 
 
+const messagesBaseUrl = "/api/messages";  //make a messagesBaseUrl variable so that if the URL ever changes we won't have to update in four different places.
