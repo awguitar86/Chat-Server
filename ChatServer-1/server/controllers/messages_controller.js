@@ -28,6 +28,6 @@ module.exports = {                          //Export an object with methods to c
     delete: ( req, res ) => {
         const deleteID = req.params.id;     //The delete method should delete a message using the value of id from the request url parameters.
         messageIndex = messages.findIndex( message => message.id == deleteID );  //We can use .findIndex again with the id to get the index of the message object
-        
+        messages.splice( messageIndex, 1 ); //use .splice to remove the index from the messages array.
     }
 }
