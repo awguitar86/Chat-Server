@@ -3,7 +3,8 @@ var id = 0;         //Create a variable that will keep track of what id to assig
 
 module.exports = {  //Export an object with methods to create, read, update, and delete messages. Each with two prameters req and res.
     create: ( req, res ) => {
-
+        const { text, time } = req.body;
+        
     },
     read: ( req, res ) => {
 
