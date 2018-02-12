@@ -6,6 +6,7 @@ module.exports = {  //Export an object with methods to create, read, update, and
         const { text, time } = req.body;
         messages.push({ id, text, time });
         i++;
+        res.status(200).send( messages );
     },
     read: ( req, res ) => {
 
