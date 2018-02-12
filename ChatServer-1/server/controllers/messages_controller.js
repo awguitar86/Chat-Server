@@ -9,7 +9,7 @@ module.exports = {                          //Export an object with methods to c
         res.status(200).send( messages );   //Send the updated messages array.
     },
     read: ( req, res ) => {
-
+        res.status(200).send( message );    //The read method should return the entire messages array.
     },
     update: ( req, res ) => {
 
