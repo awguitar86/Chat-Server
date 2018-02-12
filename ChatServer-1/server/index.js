@@ -8,7 +8,7 @@ app.use( bodyParser.json() );                           //this configures the ex
 
 const messagesBaseUrl = "/api/messages";                //make a messagesBaseUrl variable so that if the URL ever changes we won't have to update in four different places.
 app.post( messagesBaseUrl, mc.create );                 //We can then use the built-in methods express gives us to create endpoints. 
-app.get( messagesBaseUrl, ms.read );                    //We'll use post for create; get for read; put for update; and delete for delete.
+app.get( messagesBaseUrl, mc.read );                    //We'll use post for create; get for read; put for update; and delete for delete.
 app.put( `${messagesBaseUrl}/:id`, mc.update );         //For the put and delete endpoints, we need to add on a url parameter of id.
 app.delete( `${messagesBaseUrl}/:id`, mc.delete );      //A url paramter can be defined by adding :variableName when making the URL for an endpoint.
 
