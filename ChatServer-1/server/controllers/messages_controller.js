@@ -15,7 +15,15 @@ module.exports = {                          //Export an object with methods to c
         const { text } = req.body;          //Update the text property of a message using the text value from the request body. 
         const updateID = req.params.id;     //determine which message to update based on the value of id from the request url parameters.
         const messageIndex = messages.findIndex( messages => messages.id == updateID );  //We can use .findIndex to get the index where the ids match.
-        
+        let messages = messages[ messageIndex ];  //We can then get the object using the index and update the object. 
+
+        messages[ messageIndex ] = {
+            id: message.id,
+            text: text || message.text,
+            time: message.time
+        };
+
+        res.status(200).send( messages );   //Then we can return the updated messages array.
     },
     delete: ( req, res ) => {
 
