@@ -4,7 +4,8 @@ var mc = require( __dirname + '/controllers/messages_controller' );
 
 var app = express();                                    //this creates an express app by saving it to a variable.
 
-app.use( bodyParser.json() );                           //this configures the express app to parse JSON from the body. 
+app.use( bodyParser.json() );                           //this configures the express app to parse JSON from the body.
+app.use( express.static( __dirname + '/../public/build' ) ); 
 
 const messagesBaseUrl = "/api/messages";                //make a messagesBaseUrl variable so that if the URL ever changes we won't have to update in four different places.
 app.post( messagesBaseUrl, mc.create );                 //We can then use the built-in methods express gives us to create endpoints. 
