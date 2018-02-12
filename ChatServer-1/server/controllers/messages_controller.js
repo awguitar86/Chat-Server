@@ -9,13 +9,13 @@ module.exports = {                          //Export an object with methods to c
         res.status(200).send( messages );   //Send the updated messages array.
     },
     read: ( req, res ) => {
-        res.status(200).send( message );    //The read method should return the entire messages array.
+        res.status(200).send( messages );    //The read method should return the entire messages array.
     },
     update: ( req, res ) => {
         const { text } = req.body;          //Update the text property of a message using the text value from the request body. 
         const updateID = req.params.id;     //determine which message to update based on the value of id from the request url parameters.
-        const messageIndex = messages.findIndex( messages => messages.id == updateID );  //We can use .findIndex to get the index where the ids match.
-        let messages = messages[ messageIndex ];  //We can then get the object using the index and update the object. 
+        const messageIndex = messages.findIndex( message => message.id == updateID );  //We can use .findIndex to get the index where the ids match.
+        let message = messages[ messageIndex ];  //We can then get the object using the index and update the object. 
 
         messages[ messageIndex ] = {
             id: message.id,
